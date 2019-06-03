@@ -99,9 +99,9 @@ public:
      * Two values are considered equal if they are the same value in memory,
      * not necessarily if they have the same values in their arrays.
      */
-    nothrow pure @nogc @safe
+    const nothrow pure @nogc @safe
     bool
-    opEquals(Value other)
+    opEquals(const(Value) other)
     {
         return payload is other.payload;
     }
