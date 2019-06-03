@@ -126,6 +126,12 @@ struct Header
 static assert (!hasIndirections!Header);
 
 /**
+ * Ensure that the size of <em>Header</em> is such that <em>P</em> directly
+ * following it is correctly aligned.
+ */
+static assert (Header.sizeof % Value.alignof == 0);
+
+/**
  * Test, through the constructor postconditions, that value construction works
  * as expected.
  */
