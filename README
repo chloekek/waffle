@@ -1,0 +1,2 @@
+Waffle is a dynamically typed programming language that uses the D runtime
+system and can be safely embedded into existing D applications.
